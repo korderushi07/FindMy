@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find My Exam Seat</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <div class="app">
+
+    <!-- Header -->
+    <div class="header">
+      <h1>Find Your Exam Seat</h1>
+      <p>Enter details to locate your room instantly</p>
+    </div>
+
+    <!-- Card -->
+    <div class="card">
+
+      <input type="number" id="roll" placeholder="Roll Number" />
+
+      <select id="branch">
+        <option value="">Select Branch</option>
+        <option value="CT">CT</option>
+        <option value="AIDS">AIDS</option>
+        <option value="CSE IOT">CSE IOT</option>
+      </select>
+
+      <div class="row">
+        <select id="sem">
+          <option value="">Semester</option>
+          <option value="IV">IV</option>
+          <option value="VI">VI</option>
+        </select>
+
+      </div>
+
+      <button onclick="findSeat()">Find Seat</button>
+
+      <div id="result" class="result"></div>
+
+    </div>
+
+    <footer>
+      <p>Seat Finder • Built by Students</p>
+    </footer>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

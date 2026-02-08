@@ -1,0 +1,26 @@
+Program,Branch,Sem.,Subject,Roll No. (From),Roll No. (To),Room No.,Total Students
+UG,CT,IV A,Linear Algebra,1,30,EL-102,30
+UG,AIDS,IV A,Database Management Systems,1,33,EL-102,30
+UG,CT,IV A,Linear Algebra,31,58,EL-103,25
+UG,AIDS,IV A,Database Management Systems,34,57,EL-103,25
+UG,CT,IV A,Linear Algebra,59,78,EL-203,20
+UG,CT,IV B,Linear Algebra,101,119,EL-203,19
+UG,AIDS,IV A,Database Management Systems,58,76,EL-203,19
+UG,AIDS,IV B,Database Management Systems,101,120,EL-203,20
+UG,CT,IV B,Linear Algebra,120,158,EL-204,29
+UG,AIDS,IV B,Database Management Systems,121,150,EL-204,29
+UG,CT,IV B,Linear Algebra,159,183,EL-211,25
+UG,CSE IOT,IV,Probability Theory and Sampling Theory,1,10,EL-211,10
+UG,AIDS,IV B,Database Management Systems,151,177,EL-211,27
+UG,CT,VI,Software Engineering Tools,22070051,23070062,EL-211,8
+UG,CSE IOT,IV,Probability Theory and Sampling Theory,11,45,EL-302,32
+UG,CT,VI,Software Engineering Tools,23070069,23070874,EL-302,32
+UG,CSE IOT,IV,Probability Theory and Sampling Theory,46,80,EL-303,35
+UG,CT,VI,Software Engineering Tools,23070922,24030088,EL-303,35
+UG,CT,VI,Software Engineering Tools,24030104,24030192,ET-308,6
+UG,AIDS,VI,Introduction to Big Data Analytics,21071362,23070636,ET-308,26
+UG,CSE IOT,VI,Security and Privacy in IoT,21070205,23070549,ET-308,32
+UG,AIDS,VI,Introduction to Big Data Analytics,23070656,23071361,ET-316,37
+UG,CSE IOT,VI,Security and Privacy in IoT,23070552,24030030,ET-316,37
+UG,AIDS,VI,Introduction to Big Data Analytics,23071368,24030167,CT-LAB1,15
+UG,CSE IOT,VI,Security and Privacy in IoT,24030031,24030150,CT-LAB1,7
