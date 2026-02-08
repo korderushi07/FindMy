@@ -38,26 +38,77 @@ body {
   opacity: 0.7;
 }
 
+/* MSE Highlight Banner */
+.mse-banner {
+  margin: 0 auto 14px auto;
+  width: 100%;
+  max-width: 420px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 6px 18px rgba(59,130,246,0.06), 0 1px 0 rgba(255,255,255,0.02) inset;
+  border: 1px solid rgba(77,163,255,0.08);
+  text-align: center;
+}
+
+.mse-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #dbeafe;
+  margin-bottom: 4px;
+}
+
+.mse-subtitle {
+  font-size: 12px;
+  color: rgba(255,255,255,0.75);
+  opacity: 0.8;
+}
+
+@media (max-width: 480px) {
+  .mse-banner { width: 90%; padding: 10px; }
+  .mse-title { font-size: 15px; }
+  .mse-subtitle { font-size: 12px; }
+}
+
 /* Card */
 .card {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   border-radius: 14px;
   padding: 20px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
-input, select {
+input,
+select {
   width: 100%;
   padding: 12px;
   margin-bottom: 12px;
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
   outline: none;
-  background: rgba(255,255,255,0.08);
-  color: white;
+  background: linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.02));
+  color: #f8fafc;
   font-size: 14px;
   appearance: none;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);
+  transition: box-shadow 180ms ease, border-color 180ms ease, transform 120ms ease;
+}
+
+/* Make placeholder more legible */
+input::placeholder,
+select::placeholder {
+  color: rgba(255,255,255,0.45);
+}
+
+/* Focus state with subtle glow */
+input:focus,
+select:focus {
+  border-color: rgba(59,130,246,0.9);
+  box-shadow: 0 10px 30px rgba(59,130,246,0.09), inset 0 1px 0 rgba(255,255,255,0.03);
+  transform: translateY(-1px);
 }
 
 /* Fix dropdown arrow + background */
@@ -108,7 +159,7 @@ button:hover {
   margin-top: 16px;
   padding: 14px;
   border-radius: 10px;
-  background: rgba(59,130,246,0.15);
+  background: rgba(59, 130, 246, 0.15);
   font-size: 15px;
 }
 
@@ -129,4 +180,113 @@ footer {
   .card {
     padding: 16px;
   }
+}
+
+
+.exam-highlight {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 16px;
+  text-align: center;
+  backdrop-filter: blur(6px);
+}
+
+/* Hide top exam info by default (will appear in result card after successful search) */
+.exam-highlight {
+  display: none;
+}
+
+/* Result Card (hidden by default via inline style or JS) */
+.result-card {
+  display: none; /* explicitly hidden until JS toggles */
+  margin-top: 18px;
+  padding: 18px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
+  text-align: center;
+  box-shadow: 0 6px 24px rgba(2,6,23,0.6);
+}
+
+.rc-header {
+  margin-bottom: 12px;
+}
+
+.rc-shift {
+  font-size: 15px;
+  color: #9fd6ff;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.rc-time {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.rc-date {
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.rc-body {
+  display: grid;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.rc-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.12);
+}
+
+.rc-label {
+  font-size: 13px;
+  opacity: 0.85;
+  text-align: left;
+}
+
+.rc-value {
+  font-weight: 700;
+  font-size: 15px;
+  text-align: right;
+}
+
+@media (max-width: 480px) {
+  .result-card { padding: 14px; }
+  .rc-time { font-size: 18px; }
+  .rc-row { padding: 10px; }
+}
+
+.exam-badge {
+  font-size: 12px;
+  opacity: 0.7;
+  margin-bottom: 4px;
+}
+
+.exam-main {
+  margin: 6px 0;
+}
+
+.exam-shift {
+  font-size: 18px;
+  font-weight: 600;
+  color: #4da3ff;
+}
+
+.exam-time {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.exam-date {
+  font-size: 13px;
+  opacity: 0.75;
 }

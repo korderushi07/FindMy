@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,6 +17,25 @@
       <h1>Find Your Exam Seat</h1>
       <p>Enter details to locate your room instantly</p>
     </div>
+
+    <!-- MSE Highlight Banner (small, centered, above the form) -->
+    <div class="mse-banner" role="note" aria-label="Exam highlight">
+      <div class="mse-title">MSE-1 Examination</div>
+     
+    </div>
+
+    <!-- Exam Highlight -->
+    <div class="exam-highlight">
+      <div class="exam-badge">Mid Semister Exam 1</div>
+
+      <div class="exam-main">
+        <div class="exam-shift">Morning Shift</div>
+        <div class="exam-time">10:00 AM – 11:30 PM</div>
+      </div>
+
+      <div class="exam-date">09 February 2026</div>
+    </div>
+
 
     <!-- Card -->
     <div class="card">
@@ -40,7 +60,33 @@
 
       <button onclick="findSeat()">Find Seat</button>
 
-      <div id="result" class="result"></div>
+      <div id="result" class="result" role="status" aria-live="polite"></div>
+
+      <!-- Hidden result card: shown only when a valid seat is found -->
+      <div id="resultCard" class="result-card" aria-hidden="true" style="display: none;">
+        <div class="rc-header">
+          <div id="rc-shift" class="rc-shift" aria-hidden="false"></div>
+          <div id="rc-time" class="rc-time"></div>
+          <div id="rc-date" class="rc-date"></div>
+        </div>
+
+        <div class="rc-body">
+          <div class="rc-row">
+            <div class="rc-label">Room</div>
+            <div id="rc-room" class="rc-value"></div>
+          </div>
+
+          <div class="rc-row">
+            <div class="rc-label">Bench / Seat</div>
+            <div id="rc-seat" class="rc-value"></div>
+          </div>
+
+          <div class="rc-row">
+            <div class="rc-label">Building</div>
+            <div id="rc-building" class="rc-value"></div>
+          </div>
+        </div>
+      </div>
 
     </div>
 
@@ -52,4 +98,5 @@
 
   <script src="js/script.js"></script>
 </body>
+
 </html>
